@@ -14,8 +14,8 @@ Type
 
 Procedure WriteCondition();
 Begin
-    Writeln('Данная программа складывает два числа столбиком.');
-    Writeln('Условие ввода чисел: числа целые, от 1 до 1000000.');
+    Writeln('Г„Г Г­Г­Г Гї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г  Г±ГЄГ«Г Г¤Г»ГўГ ГҐГІ Г¤ГўГ  Г·ГЁГ±Г«Г  Г±ГІГ®Г«ГЎГЁГЄГ®Г¬.');
+    Writeln('Г“Г±Г«Г®ГўГЁГҐ ГўГўГ®Г¤Г  Г·ГЁГ±ГҐГ«: Г·ГЁГ±Г«Г  Г¶ГҐГ«Г»ГҐ, Г®ГІ 1 Г¤Г® 1000000.');
 End;
 
 Function InputNum(Number: Integer): Integer;
@@ -25,16 +25,16 @@ Var
 Begin
     Repeat
         IsCorrect := True;
-        Write('Введите ', Number, ' число: ');
+        Write('Г‚ГўГҐГ¤ГЁГІГҐ ', Number, ' Г·ГЁГ±Г«Г®: ');
         Try
             Read(Num);
         Except
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
         End;
         If IsCorrect And ((Num < MINNUM) Or (Num > MAXNUM)) Then
         Begin
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
         End;
     Until IsCorrect;
@@ -142,7 +142,7 @@ Procedure OutputSum(FstNumArr, SecNumArr, Sum: TArrOI);
 Var
     I: Integer;
 Begin
-    Writeln('Результат:');
+    Writeln('ГђГҐГ§ГіГ«ГјГІГ ГІ:');
     OutputArray(FstNumArr, Sum);
     Writeln('+');
     OutputArray(SecNumArr, Sum);
