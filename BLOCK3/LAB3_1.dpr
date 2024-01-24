@@ -5,14 +5,14 @@ Uses
 
 Const
     NUMBERS = ['0' .. '9'];
-    LETTERS = ['A' .. 'Z', 'a' .. 'z', 'А' .. 'Я', 'а' .. 'я', 'Ё', 'ё'];
+    LETTERS = ['A' .. 'Z', 'a' .. 'z', 'ГЂ' .. 'Гџ', 'Г ' .. 'Гї', 'ВЁ', 'Вё'];
     OPENBRACE = '(';
     CLOSEBRACE = ')';
 
 Procedure WriteCondition();
 Begin
-    Writeln('Данная программа в каждом четном слове текста заменяет все буквы на прописные,',
-      #10, 'а каждое нечетное слово заключает в круглые скобки.');
+    Writeln('Г„Г Г­Г­Г Гї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г  Гў ГЄГ Г¦Г¤Г®Г¬ Г·ГҐГІГ­Г®Г¬ Г±Г«Г®ГўГҐ ГІГҐГЄГ±ГІГ  Г§Г Г¬ГҐГ­ГїГҐГІ ГўГ±ГҐ ГЎГіГЄГўГ» Г­Г  ГЇГ°Г®ГЇГЁГ±Г­Г»ГҐ,',
+      #10, 'Г  ГЄГ Г¦Г¤Г®ГҐ Г­ГҐГ·ГҐГІГ­Г®ГҐ Г±Г«Г®ГўГ® Г§Г ГЄГ«ГѕГ·Г ГҐГІ Гў ГЄГ°ГіГЈГ«Г»ГҐ Г±ГЄГ®ГЎГЄГЁ.');
 End;
 
 Function CheckChoiceInput(OutputMessage: String): Integer;
@@ -27,12 +27,12 @@ Begin
             Readln(Num);
         Except
             IsCorrect := False;
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         End;
         If IsCorrect And ((Num <> 0) And (Num <> 1)) Then
         Begin
             IsCorrect := False;
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         End;
     Until (IsCorrect);
     Writeln;
@@ -46,7 +46,7 @@ Var
 Begin
     IsCorrect := False;
     If Text = '' Then
-        Writeln('В тексте нет символов. Повторите попытку.')
+        Writeln('Г‚ ГІГҐГЄГ±ГІГҐ Г­ГҐГІ Г±ГЁГ¬ГўГ®Г«Г®Гў. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.')
     Else
     Begin
         I := 1;
@@ -57,7 +57,7 @@ Begin
             Inc(I);
         End;
         If Not IsCorrect Then
-            Writeln('В тексте нет букв. Повторите попытку.');
+            Writeln('Г‚ ГІГҐГЄГ±ГІГҐ Г­ГҐГІ ГЎГіГЄГў. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
     End;
     IsTextCorrect := IsCorrect;
 End;
@@ -67,7 +67,7 @@ Var
     Text: AnsiString;
 Begin
     Repeat
-        Writeln('Введите текст.');
+        Writeln('Г‚ГўГҐГ¤ГЁГІГҐ ГІГҐГЄГ±ГІ.');
         Readln(Text);
     Until IsTextCorrect(Text);
     Writeln;
@@ -81,12 +81,12 @@ Begin
     IsCorrect := True;
     If Not FileExists(Path) Then
     Begin
-        Writeln('Введенного файла не существует. Повторите попытку.');
+        Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±ГіГ№ГҐГ±ГІГўГіГҐГІ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         IsCorrect := False;
     End
     Else If ExtractFileExt(Path) <> '.txt' Then
     Begin
-        Writeln('Введенный Вами файл не является текстовым. Повторите попытку.');
+        Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»Г© Г‚Г Г¬ГЁ ГґГ Г©Г« Г­ГҐ ГїГўГ«ГїГҐГІГ±Гї ГІГҐГЄГ±ГІГ®ГўГ»Г¬. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         IsCorrect := False;
     End;
     IsFilePathCorrect := IsCorrect;
@@ -97,7 +97,7 @@ Var
     Path: String;
 Begin
     Repeat
-        Writeln('Введите путь к файлу, содержащему текст.');
+        Writeln('Г‚ГўГҐГ¤ГЁГІГҐ ГЇГіГІГј ГЄ ГґГ Г©Г«Гі, Г±Г®Г¤ГҐГ°Г¦Г Г№ГҐГ¬Гі ГІГҐГЄГ±ГІ.');
         Readln(Path);
     Until IsFilePathCorrect(Path);
     CheckFileInputPath := Path;
@@ -126,7 +126,7 @@ Begin
                 CloseFile(FIn);
             End;
         Except
-            Writeln('Произошла ошибка. Повторите попытку.');
+            Writeln('ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ . ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
         End;
         If Not IsCorrect Then
@@ -135,7 +135,7 @@ Begin
             Text := '';
         End;
     Until IsCorrect;
-    Writeln('Данные из файла успешно считаны.');
+    Writeln('Г„Г Г­Г­Г»ГҐ ГЁГ§ ГґГ Г©Г«Г  ГіГ±ГЇГҐГёГ­Г® Г±Г·ГЁГІГ Г­Г».');
     Writeln;
     GetTextFromFile := Text;
 End;
@@ -147,14 +147,14 @@ Var
     FInPath: String;
 Begin
     Choice := CheckChoiceInput
-      ('Если Вы хотите вводить данные в консоль, введите 0. Если использовать файл, введите 1.');
+      ('Г…Г±Г«ГЁ Г‚Г» ГµГ®ГІГЁГІГҐ ГўГўГ®Г¤ГЁГІГј Г¤Г Г­Г­Г»ГҐ Гў ГЄГ®Г­Г±Г®Г«Гј, ГўГўГҐГ¤ГЁГІГҐ 0. Г…Г±Г«ГЁ ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ ГІГј ГґГ Г©Г«, ГўГўГҐГ¤ГЁГІГҐ 1.');
     If Choice = 0 Then
         Text := InputTextFromConsole()
     Else
     Begin
         FInPath := CheckFileInputPath();
         Text := GetTextFromFile(FInPath);
-        Writeln('Введенный текст:', #10, Text);
+        Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»Г© ГІГҐГЄГ±ГІ:', #10, Text);
     End;
     InputText := Text;
 End;
@@ -199,12 +199,12 @@ Var
 Begin
     Repeat
         IsCorrect := True;
-        Writeln('Введите путь к файлу, в который нужно записать результат.');
+        Writeln('Г‚ГўГҐГ¤ГЁГІГҐ ГЇГіГІГј ГЄ ГґГ Г©Г«Гі, Гў ГЄГ®ГІГ®Г°Г»Г© Г­ГіГ¦Г­Г® Г§Г ГЇГЁГ±Г ГІГј Г°ГҐГ§ГіГ«ГјГІГ ГІ.');
         Readln(Path);
         IsCorrect := IsFilePathCorrect(Path);
         If IsCorrect And FileIsReadOnly(Path) Then
         Begin
-            Writeln('Введенный Вами файл доступен только для чтения. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»Г© Г‚Г Г¬ГЁ ГґГ Г©Г« Г¤Г®Г±ГІГіГЇГҐГ­ ГІГ®Г«ГјГЄГ® Г¤Г«Гї Г·ГІГҐГ­ГЁГї. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
         End;
     Until IsCorrect;
@@ -227,12 +227,12 @@ Begin
                 CloseFile(FOut);
             End;
         Except
-            Writeln('Произошла ошибка. Повторите попытку.');
+            Writeln('ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ . ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
             Path := CheckFileOutputPath();
         End;
     Until IsCorrect;
-    Writeln('Результат записан.');
+    Writeln('ГђГҐГ§ГіГ«ГјГІГ ГІ Г§Г ГЇГЁГ±Г Г­.');
 End;
 
 Procedure OutputText(ResultText: AnsiString);
@@ -241,9 +241,9 @@ Var
     FOutPath: String;
 Begin
     Choice := CheckChoiceInput
-      ('Если Вы хотите вывести результат в консоль, введите 0. Если в файл, введите 1.');
+      ('Г…Г±Г«ГЁ Г‚Г» ГµГ®ГІГЁГІГҐ ГўГ»ГўГҐГ±ГІГЁ Г°ГҐГ§ГіГ«ГјГІГ ГІ Гў ГЄГ®Г­Г±Г®Г«Гј, ГўГўГҐГ¤ГЁГІГҐ 0. Г…Г±Г«ГЁ Гў ГґГ Г©Г«, ГўГўГҐГ¤ГЁГІГҐ 1.');
     If Choice = 0 Then
-        Writeln('Результат:', #10, ResultText)
+        Writeln('ГђГҐГ§ГіГ«ГјГІГ ГІ:', #10, ResultText)
     Else
     Begin
         FOutPath := CheckFileOutputPath();
