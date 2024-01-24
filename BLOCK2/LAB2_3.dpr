@@ -25,12 +25,12 @@ Begin
             Readln(Size);
         Except
             IsCorrect := False;
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         End;
         If IsCorrect And ((Size < MINSIZE) Or (Size > MAXSIZE)) Then
         Begin
             IsCorrect := False;
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         End;
     Until (IsCorrect);
     InputSize := Size;
@@ -47,18 +47,18 @@ Begin
         For J := 0 To High(Matrix[I]) Do
             Repeat
                 IsCorrect := True;
-                Write('Введите элемент ', I + 1, ' строки, ', J + 1,
-                  ' столбца матрицы: ');
+                Write('Г‚ГўГҐГ¤ГЁГІГҐ ГЅГ«ГҐГ¬ГҐГ­ГІ ', I + 1, ' Г±ГІГ°Г®ГЄГЁ, ', J + 1,
+                  ' Г±ГІГ®Г«ГЎГ¶Г  Г¬Г ГІГ°ГЁГ¶Г»: ');
                 Try
                     Readln(Matrix[I][J]);
                 Except
-                    Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+                    Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                     IsCorrect := False;
                 End;
                 If IsCorrect And
                   ((Matrix[I][J] > MAX) Or (Matrix[I][J] < MIN)) Then
                 Begin
-                    Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+                    Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                     IsCorrect := False;
                 End;
             Until (IsCorrect);
@@ -76,16 +76,16 @@ Begin
     For I := 0 To High(Vector) Do
         Repeat
             IsCorrect := True;
-            Write('Введите ', I + 1, ' элемент ', VectorOrMatrix, ': ');
+            Write('Г‚ГўГҐГ¤ГЁГІГҐ ', I + 1, ' ГЅГ«ГҐГ¬ГҐГ­ГІ ', VectorOrMatrix, ': ');
             Try
                 Readln(Vector[I]);
             Except
-                Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+                Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                 IsCorrect := False;
             End;
             If IsCorrect And ((Vector[I] > MAX) Or (Vector[I] < MIN)) Then
             Begin
-                Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+                Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                 IsCorrect := False;
             End;
         Until (IsCorrect);
@@ -99,12 +99,12 @@ Var
 Begin
     If Not FileExists(Path) Then
     Begin
-        Writeln('Введенного файла не существует. Повторите попытку.');
+        Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±ГіГ№ГҐГ±ГІГўГіГҐГІ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         IsCorrect := False;
     End
     Else If ExtractFileExt(Path) <> '.txt' Then
     Begin
-        Writeln('Введенный Вами файл не является текстовым. Повторите попытку.');
+        Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»Г© Г‚Г Г¬ГЁ ГґГ Г©Г« Г­ГҐ ГїГўГ«ГїГҐГІГ±Гї ГІГҐГЄГ±ГІГ®ГўГ»Г¬. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         IsCorrect := False;
     End;
     CheckFilePath := IsCorrect;
@@ -117,7 +117,7 @@ Var
 Begin
     Repeat
         IsCorrect := True;
-        Writeln('Введите путь к файлу, содержащему ', MatrixOrVector, '.');
+        Writeln('Г‚ГўГҐГ¤ГЁГІГҐ ГЇГіГІГј ГЄ ГґГ Г©Г«Гі, Г±Г®Г¤ГҐГ°Г¦Г Г№ГҐГ¬Гі ', MatrixOrVector, '.');
         Readln(Path);
         IsCorrect := CheckFilePath(Path);
     Until IsCorrect;
@@ -139,14 +139,14 @@ Begin
                 Read(FIn, Size);
                 If (IsCorrect And (Size < MINSIZE) Or (Size > MAXSIZE)) Then
                 Begin
-                    Writeln('Размер в выбранном файле не соответствуют условию. Повторите попытку.');
+                    Writeln('ГђГ Г§Г¬ГҐГ° Гў ГўГ»ГЎГ°Г Г­Г­Г®Г¬ ГґГ Г©Г«ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                     IsCorrect := False;
                 End;
             Finally
                 CloseFile(FIn);
             End;
         Except
-            Writeln('Данные выбранного файла не соответствуют условию. Повторите попытку.');
+            Writeln('Г„Г Г­Г­Г»ГҐ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
         End;
         If Not IsCorrect Then
@@ -178,7 +178,7 @@ Begin
                     Begin
                         If Eof(FIn) Then
                         Begin
-                            Writeln('Данные выбранного файла не соответствуют условию. Повторите попытку.');
+                            Writeln('Г„Г Г­Г­Г»ГҐ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                             IsCorrect := False;
                         End;
                         While ((J < (High(Matrix[0]) + 1)) And IsCorrect) Do
@@ -186,7 +186,7 @@ Begin
                         If (IsCorrect And ((Matrix[I][J] < MIN) Or
                           (Matrix[I][J] > MAX))) Then
                         Begin
-                            Writeln('Данные выбранного файла не соответствуют условию. Повторите попытку.');
+                            Writeln('Г„Г Г­Г­Г»ГҐ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                             IsCorrect := False;
                         End;
                         Inc(J);
@@ -195,20 +195,20 @@ Begin
                 End;
                 If (IsCorrect And (Not Eof(FIn))) Then
                 Begin
-                    Writeln('Размер введенной матрицы не соответствует заданному. Повторите попытку.');
+                    Writeln('ГђГ Г§Г¬ГҐГ° ГўГўГҐГ¤ГҐГ­Г­Г®Г© Г¬Г ГІГ°ГЁГ¶Г» Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГҐГІ Г§Г Г¤Г Г­Г­Г®Г¬Гі. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                     IsCorrect := False;
                 End;
             Finally
                 CloseFile(FIn);
             End;
         Except
-            Writeln('Данные выбранного файла не соответствуют условию. Повторите попытку.');
+            Writeln('Г„Г Г­Г­Г»ГҐ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
         End;
         If Not IsCorrect Then
-            Path := CheckFileInputPath('матрицу');
+            Path := CheckFileInputPath('Г¬Г ГІГ°ГЁГ¶Гі');
     Until IsCorrect;
-    Writeln('Данные из файла успешно считаны.');
+    Writeln('Г„Г Г­Г­Г»ГҐ ГЁГ§ ГґГ Г©Г«Г  ГіГ±ГЇГҐГёГ­Г® Г±Г·ГЁГІГ Г­Г».');
     Writeln;
     FillMatrixFromFile := Matrix;
 End;
@@ -234,34 +234,34 @@ Begin
                 Begin
                     If Eof(FIn) Then
                     Begin
-                        Writeln('Данные выбранного файла не соответствуют условию. Повторите попытку.');
+                        Writeln('Г„Г Г­Г­Г»ГҐ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                         IsCorrect := False;
                     End;
                     Read(FIn, Vector[I]);
                     If (IsCorrect And ((Vector[I] < MIN) Or
                       (Vector[I] > MAX))) Then
                     Begin
-                        Writeln('Данные выбранного файла не соответствуют условию. Повторите попытку.');
+                        Writeln('Г„Г Г­Г­Г»ГҐ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                         IsCorrect := False;
                     End;
                     Inc(I);
                 End;
                 If (IsCorrect And (Not Eof(FIn))) Then
                 Begin
-                    Writeln('Размер введенного вектора/матрицы не соответствует заданному. Повторите попытку.');
+                    Writeln('ГђГ Г§Г¬ГҐГ° ГўГўГҐГ¤ГҐГ­Г­Г®ГЈГ® ГўГҐГЄГІГ®Г°Г /Г¬Г ГІГ°ГЁГ¶Г» Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГҐГІ Г§Г Г¤Г Г­Г­Г®Г¬Гі. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                     IsCorrect := False;
                 End;
             Finally
                 CloseFile(FIn);
             End;
         Except
-            Writeln('Данные выбранного файла не соответствуют условию. Повторите попытку.');
+            Writeln('Г„Г Г­Г­Г»ГҐ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
         End;
         If Not IsCorrect Then
             Path := CheckFileInputPath(MatrixOrVector);
     Until IsCorrect;
-    Writeln('Данные из файла успешно считаны.');
+    Writeln('Г„Г Г­Г­Г»ГҐ ГЁГ§ ГґГ Г©Г«Г  ГіГ±ГЇГҐГёГ­Г® Г±Г·ГЁГІГ Г­Г».');
     Writeln;
     FillVectorFromFile := Vector;
 End;
@@ -333,12 +333,12 @@ Begin
     Writeln;
     Repeat
         IsCorrect := True;
-        Writeln('Введите путь к файлу, в который нужно записать результат.');
+        Writeln('Г‚ГўГҐГ¤ГЁГІГҐ ГЇГіГІГј ГЄ ГґГ Г©Г«Гі, Гў ГЄГ®ГІГ®Г°Г»Г© Г­ГіГ¦Г­Г® Г§Г ГЇГЁГ±Г ГІГј Г°ГҐГ§ГіГ«ГјГІГ ГІ.');
         Readln(Path);
         IsCorrect := CheckFilePath(Path);
         If IsCorrect And FileIsReadOnly(Path) Then
         Begin
-            Writeln('Введенный Вами файл доступен только для чтения. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»Г© Г‚Г Г¬ГЁ ГґГ Г©Г« Г¤Г®Г±ГІГіГЇГҐГ­ ГІГ®Г«ГјГЄГ® Г¤Г«Гї Г·ГІГҐГ­ГЁГї. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
         End;
     Until IsCorrect;
@@ -363,12 +363,12 @@ Begin
                 CloseFile(FOut);
             End;
         Except
-            Writeln('Произошла ошибка. Повторите попытку.');
+            Writeln('ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ . ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
             Path := CheckFileOutputPath();
         End;
     Until IsCorrect;
-    Writeln('Результат записан.');
+    Writeln('ГђГҐГ§ГіГ«ГјГІГ ГІ Г§Г ГЇГЁГ±Г Г­.');
 End;
 
 Procedure WriteMatrixIntoFile(Path: String; ProductMatrix: TMatrix);
@@ -393,12 +393,12 @@ Begin
                 CloseFile(FOut);
             End;
         Except
-            Writeln('Произошла ошибка. Повторите попытку.');
+            Writeln('ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ . ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
             Path := CheckFileOutputPath();
         End;
     Until IsCorrect;
-    Writeln('Результат записан.');
+    Writeln('ГђГҐГ§ГіГ«ГјГІГ ГІ Г§Г ГЇГЁГ±Г Г­.');
 End;
 
 Function GetVectorFromFile(MatrixOrVector: String): TVector;
@@ -419,27 +419,27 @@ Var
     FInPathMatrix: String;
     Matrix: TMatrix;
 Begin
-    Writeln('Количество строк матрицы равно ', RowNum,
-      '. В первой строке файла введите количество столбцов.');
-    FInPathMatrix := CheckFileInputPath('матрицу');
-    ColNum := GetSizeFromFile(FInPathMatrix, 'матрицу');
+    Writeln('ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г®ГЄ Г¬Г ГІГ°ГЁГ¶Г» Г°Г ГўГ­Г® ', RowNum,
+      '. Г‚ ГЇГҐГ°ГўГ®Г© Г±ГІГ°Г®ГЄГҐ ГґГ Г©Г«Г  ГўГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ®Г«ГЎГ¶Г®Гў.');
+    FInPathMatrix := CheckFileInputPath('Г¬Г ГІГ°ГЁГ¶Гі');
+    ColNum := GetSizeFromFile(FInPathMatrix, 'Г¬Г ГІГ°ГЁГ¶Гі');
     Matrix := FillMatrixFromFile(RowNum, ColNum, FInPathMatrix, Matrix);
     GetMatrixFromFile := Matrix;
 End;
 
 Procedure OutputVectors(VectorColumn, VectorRow: TVector);
 Begin
-    Writeln('Введенный вектор:');
+    Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»Г© ГўГҐГЄГІГ®Г°:');
     OutputVectorColumn(VectorColumn);
-    Writeln('Введенная матрица:');
+    Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г Гї Г¬Г ГІГ°ГЁГ¶Г :');
     OutputVectorRow(VectorRow);
 End;
 
 Procedure OutputVectorAndMatrix(Vector: TVector; Matrix: TMatrix);
 Begin
-    Writeln('Введенный вектор:');
+    Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»Г© ГўГҐГЄГІГ®Г°:');
     OutputVectorRow(Vector);
-    Writeln('Введенная матрица:');
+    Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г Гї Г¬Г ГІГ°ГЁГ¶Г :');
     OutputMatrix(Matrix);
 End;
 
@@ -449,25 +449,25 @@ Var
     Vector, VectorRow, ProductVector: TVector;
     Matrix, ProductMatrix: TMatrix;
 Begin
-    RowNum := InputSize('Введите размер вектора (от 2 до 10): ');
-    Vector := InputVector(RowNum, 'вектора');
-    ColNum := InputSize('Введите количество столбцов матрицы (от 2 до 10): ');
+    RowNum := InputSize('Г‚ГўГҐГ¤ГЁГІГҐ Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  (Г®ГІ 2 Г¤Г® 10): ');
+    Vector := InputVector(RowNum, 'ГўГҐГЄГІГ®Г°Г ');
+    ColNum := InputSize('Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ®Г«ГЎГ¶Г®Гў Г¬Г ГІГ°ГЁГ¶Г» (Г®ГІ 2 Г¤Г® 10): ');
     If VectorType = 0 Then
     Begin
-        VectorRow := InputVector(ColNum, 'матрицы');
+        VectorRow := InputVector(ColNum, 'Г¬Г ГІГ°ГЁГ¶Г»');
         OutputVectors(Vector, VectorRow);
         ProductMatrix := FindProductMatrix(High(Vector) + 1,
           High(VectorRow) + 1, Vector, VectorRow);
-        Writeln('Результат произведения вектора и матрицы:');
+        Writeln('ГђГҐГ§ГіГ«ГјГІГ ГІ ГЇГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­ГЁГї ГўГҐГЄГІГ®Г°Г  ГЁ Г¬Г ГІГ°ГЁГ¶Г»:');
         OutputMatrix(ProductMatrix);
     End
     Else
     Begin
-        Writeln('Количество строк матрицы равно ', RowNum, '.');
+        Writeln('ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г®ГЄ Г¬Г ГІГ°ГЁГ¶Г» Г°Г ГўГ­Г® ', RowNum, '.');
         Matrix := InputMatrix(RowNum, ColNum);
         OutputVectorAndMatrix(VectorRow, Matrix);
         ProductVector := FindProductVector(VectorRow, Matrix);
-        Writeln('Результат произведения вектора и матрицы:');
+        Writeln('ГђГҐГ§ГіГ«ГјГІГ ГІ ГЇГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­ГЁГї ГўГҐГЄГІГ®Г°Г  ГЁ Г¬Г ГІГ°ГЁГ¶Г»:');
         OutputVectorRow(ProductVector);
     End;
 End;
@@ -479,11 +479,11 @@ Var
     Matrix, ProductMatrix: TMatrix;
     FOutPath: String;
 Begin
-    Writeln('В первой строке файла должны быть записаны размеры (от 2 до 10).');
-    Vector := GetVectorFromFile('вектор');
+    Writeln('Г‚ ГЇГҐГ°ГўГ®Г© Г±ГІГ°Г®ГЄГҐ ГґГ Г©Г«Г  Г¤Г®Г«Г¦Г­Г» ГЎГ»ГІГј Г§Г ГЇГЁГ±Г Г­Г» Г°Г Г§Г¬ГҐГ°Г» (Г®ГІ 2 Г¤Г® 10).');
+    Vector := GetVectorFromFile('ГўГҐГЄГІГ®Г°');
     If VectorType = 0 Then
     Begin
-        VectorRow := GetVectorFromFile('матрицу (вектор-строку)');
+        VectorRow := GetVectorFromFile('Г¬Г ГІГ°ГЁГ¶Гі (ГўГҐГЄГІГ®Г°-Г±ГІГ°Г®ГЄГі)');
         OutputVectors(Vector, VectorRow);
         ProductMatrix := FindProductMatrix(High(Vector) + 1,
           High(VectorRow) + 1, Vector, VectorRow);
@@ -511,12 +511,12 @@ Begin
             Readln(Num);
         Except
             IsCorrect := False;
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         End;
         If IsCorrect And ((Num <> 0) And (Num <> 1)) Then
         Begin
             IsCorrect := False;
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         End;
     Until (IsCorrect);
     CheckChoiceInput := Num;
@@ -526,20 +526,20 @@ Function ChooseVectorType(): Integer;
 Var
     VectorType: Integer;
 Begin
-    Writeln('Введите 0, если требуется умножить вектор-столбец на матрицу, и 1, если вектор-строку.');
+    Writeln('Г‚ГўГҐГ¤ГЁГІГҐ 0, ГҐГ±Г«ГЁ ГІГ°ГҐГЎГіГҐГІГ±Гї ГіГ¬Г­Г®Г¦ГЁГІГј ГўГҐГЄГІГ®Г°-Г±ГІГ®Г«ГЎГҐГ¶ Г­Г  Г¬Г ГІГ°ГЁГ¶Гі, ГЁ 1, ГҐГ±Г«ГЁ ГўГҐГЄГІГ®Г°-Г±ГІГ°Г®ГЄГі.');
     VectorType := CheckChoiceInput();
     If VectorType = 0 Then
-        Writeln('Для умножения вектора-столбца на матрицу, матрица должна состоять из 1 строки.')
+        Writeln('Г„Г«Гї ГіГ¬Г­Г®Г¦ГҐГ­ГЁГї ГўГҐГЄГІГ®Г°Г -Г±ГІГ®Г«ГЎГ¶Г  Г­Г  Г¬Г ГІГ°ГЁГ¶Гі, Г¬Г ГІГ°ГЁГ¶Г  Г¤Г®Г«Г¦Г­Г  Г±Г®Г±ГІГ®ГїГІГј ГЁГ§ 1 Г±ГІГ°Г®ГЄГЁ.')
     Else
-        Writeln('Для умножения вектора-строки на матрицу, число столбцов вектора должно совпадать с числом строк матрицы.');
+        Writeln('Г„Г«Гї ГіГ¬Г­Г®Г¦ГҐГ­ГЁГї ГўГҐГЄГІГ®Г°Г -Г±ГІГ°Г®ГЄГЁ Г­Г  Г¬Г ГІГ°ГЁГ¶Гі, Г·ГЁГ±Г«Г® Г±ГІГ®Г«ГЎГ¶Г®Гў ГўГҐГЄГІГ®Г°Г  Г¤Г®Г«Г¦Г­Г® Г±Г®ГўГЇГ Г¤Г ГІГј Г± Г·ГЁГ±Г«Г®Г¬ Г±ГІГ°Г®ГЄ Г¬Г ГІГ°ГЁГ¶Г».');
     Writeln;
     ChooseVectorType := VectorType;
 End;
 
 Procedure WriteCondition();
 Begin
-    Writeln('Данная программа находит произведение вектора на матрицу.');
-    Writeln('Элементы вектора и матрицы - целые числа от -1000 до 1000.');
+    Writeln('Г„Г Г­Г­Г Гї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г  Г­Г ГµГ®Г¤ГЁГІ ГЇГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­ГЁГҐ ГўГҐГЄГІГ®Г°Г  Г­Г  Г¬Г ГІГ°ГЁГ¶Гі.');
+    Writeln('ГќГ«ГҐГ¬ГҐГ­ГІГ» ГўГҐГЄГІГ®Г°Г  ГЁ Г¬Г ГІГ°ГЁГ¶Г» - Г¶ГҐГ«Г»ГҐ Г·ГЁГ±Г«Г  Г®ГІ -1000 Г¤Г® 1000.');
 End;
 
 Var
@@ -547,7 +547,7 @@ Var
 
 Begin
     WriteCondition();
-    Writeln('Если Вы хотите вводить данные в консоль, введите 0. Если использовать файл, введите 1.');
+    Writeln('Г…Г±Г«ГЁ Г‚Г» ГµГ®ГІГЁГІГҐ ГўГўГ®Г¤ГЁГІГј Г¤Г Г­Г­Г»ГҐ Гў ГЄГ®Г­Г±Г®Г«Гј, ГўГўГҐГ¤ГЁГІГҐ 0. Г…Г±Г«ГЁ ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ ГІГј ГґГ Г©Г«, ГўГўГҐГ¤ГЁГІГҐ 1.');
     Choice := CheckChoiceInput();
     VectorType := ChooseVectorType();
     If Choice = 0 Then
