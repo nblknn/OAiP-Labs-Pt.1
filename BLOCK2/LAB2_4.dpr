@@ -26,12 +26,12 @@ Begin
             Readln(Num);
         Except
             IsCorrect := False;
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         End;
         If IsCorrect And ((Num < MINNUM) Or (Num > MAXNUM)) Then
         Begin
             IsCorrect := False;
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         End;
     Until (IsCorrect);
     CheckInput := Num;
@@ -42,12 +42,12 @@ Var
     I, J: Integer;
     IsCorrect: Boolean;
 Begin
-    Writeln('Введите матрицу.');
+    Writeln('Г‚ГўГҐГ¤ГЁГІГҐ Г¬Г ГІГ°ГЁГ¶Гі.');
     For I := 0 To High(Matrix) Do
         For J := 0 To High(Matrix[I]) Do
         Begin
-            Write('Введите элемент ', I + 1, ' строки, ', J + 1,
-              ' столбца матрицы: ');
+            Write('Г‚ГўГҐГ¤ГЁГІГҐ ГЅГ«ГҐГ¬ГҐГ­ГІ ', I + 1, ' Г±ГІГ°Г®ГЄГЁ, ', J + 1,
+              ' Г±ГІГ®Г«ГЎГ¶Г  Г¬Г ГІГ°ГЁГ¶Г»: ');
             Matrix[I][J] := CheckInput(MIN, MAX, '');
         End;
     Writeln;
@@ -59,11 +59,11 @@ Var
     RowNum, ColNum: Integer;
     Matrix: TMatrix;
 Begin
-    Writeln('Введите размеры матрицы (от 2 до 10).');
+    Writeln('Г‚ГўГҐГ¤ГЁГІГҐ Г°Г Г§Г¬ГҐГ°Г» Г¬Г ГІГ°ГЁГ¶Г» (Г®ГІ 2 Г¤Г® 10).');
     RowNum := CheckInput(MINSIZE, MAXSIZE,
-      'Введите количество строк матрицы: ');
+      'Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г®ГЄ Г¬Г ГІГ°ГЁГ¶Г»: ');
     ColNum := CheckInput(MINSIZE, MAXSIZE,
-      'Введите количество столбцов матрицы: ');
+      'Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ®Г«ГЎГ¶Г®Гў Г¬Г ГІГ°ГЁГ¶Г»: ');
     SetLength(Matrix, RowNum, ColNum);
     Matrix := InputMatrix(Matrix);
     FillMatrixFromConsole := Matrix;
@@ -75,12 +75,12 @@ Var
 Begin
     If Not FileExists(Path) Then
     Begin
-        Writeln('Введенного файла не существует. Повторите попытку.');
+        Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±ГіГ№ГҐГ±ГІГўГіГҐГІ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         IsCorrect := False;
     End
     Else If ExtractFileExt(Path) <> '.txt' Then
     Begin
-        Writeln('Введенный Вами файл не является текстовым. Повторите попытку.');
+        Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»Г© Г‚Г Г¬ГЁ ГґГ Г©Г« Г­ГҐ ГїГўГ«ГїГҐГІГ±Гї ГІГҐГЄГ±ГІГ®ГўГ»Г¬. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         IsCorrect := False;
     End;
     CheckFilePath := IsCorrect;
@@ -93,7 +93,7 @@ Var
 Begin
     Repeat
         IsCorrect := True;
-        Writeln('Введите путь к файлу, содержащему матрицу. Первой строкой должны быть введены размеры (строки и столбцы, от 2 до 10).');
+        Writeln('Г‚ГўГҐГ¤ГЁГІГҐ ГЇГіГІГј ГЄ ГґГ Г©Г«Гі, Г±Г®Г¤ГҐГ°Г¦Г Г№ГҐГ¬Гі Г¬Г ГІГ°ГЁГ¶Гі. ГЏГҐГ°ГўГ®Г© Г±ГІГ°Г®ГЄГ®Г© Г¤Г®Г«Г¦Г­Г» ГЎГ»ГІГј ГўГўГҐГ¤ГҐГ­Г» Г°Г Г§Г¬ГҐГ°Г» (Г±ГІГ°Г®ГЄГЁ ГЁ Г±ГІГ®Г«ГЎГ¶Г», Г®ГІ 2 Г¤Г® 10).');
         Readln(Path);
         IsCorrect := CheckFilePath(Path);
     Until IsCorrect;
@@ -117,7 +117,7 @@ Begin
                 If (IsCorrect And (RowNum < MINSIZE) Or (RowNum > MAXSIZE) Or
                   (ColNum < MINSIZE) Or (ColNum > MAXSIZE)) Then
                 Begin
-                    Writeln('Размер в выбранном файле не соответствуют условию. Повторите попытку.');
+                    Writeln('ГђГ Г§Г¬ГҐГ° Гў ГўГ»ГЎГ°Г Г­Г­Г®Г¬ ГґГ Г©Г«ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                     IsCorrect := False;
                 End;
                 SetLength(Matrix, RowNum, ColNum);
@@ -129,14 +129,14 @@ Begin
                     Begin
                         If Eof(FIn) Then
                         Begin
-                            Writeln('Размер введенной матрицы не соответствует заданному. Повторите попытку.');
+                            Writeln('ГђГ Г§Г¬ГҐГ° ГўГўГҐГ¤ГҐГ­Г­Г®Г© Г¬Г ГІГ°ГЁГ¶Г» Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГҐГІ Г§Г Г¤Г Г­Г­Г®Г¬Гі. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                             IsCorrect := False;
                         End;
                         Read(FIn, Matrix[I][J]);
                         If (IsCorrect And ((Matrix[I][J] < MIN) Or
                           (Matrix[I][J] > MAX))) Then
                         Begin
-                            Writeln('Данные выбранного файла не соответствуют условию. Повторите попытку.');
+                            Writeln('Г„Г Г­Г­Г»ГҐ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                             IsCorrect := False;
                         End;
                         Inc(J);
@@ -145,20 +145,20 @@ Begin
                 End;
                 If (IsCorrect And (Not Eof(FIn))) Then
                 Begin
-                    Writeln('Размер введенной матрицы не соответствует заданному. Повторите попытку.');
+                    Writeln('ГђГ Г§Г¬ГҐГ° ГўГўГҐГ¤ГҐГ­Г­Г®Г© Г¬Г ГІГ°ГЁГ¶Г» Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГҐГІ Г§Г Г¤Г Г­Г­Г®Г¬Гі. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
                     IsCorrect := False;
                 End;
             Finally
                 CloseFile(FIn);
             End;
         Except
-            Writeln('Данные выбранного файла не соответствуют условию. Повторите попытку.');
+            Writeln('Г„Г Г­Г­Г»ГҐ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® ГґГ Г©Г«Г  Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
         End;
         If Not IsCorrect Then
             Path := CheckFileInputPath();
     Until IsCorrect;
-    Writeln('Данные из файла успешно считаны.');
+    Writeln('Г„Г Г­Г­Г»ГҐ ГЁГ§ ГґГ Г©Г«Г  ГіГ±ГЇГҐГёГ­Г® Г±Г·ГЁГІГ Г­Г».');
     Writeln;
     FillMatrixFromFile := Matrix;
 End;
@@ -167,7 +167,7 @@ Procedure OutputMatrix(Matrix: TMatrix);
 Var
     I, J: Integer;
 Begin
-    Writeln('Введенная матрица:');
+    Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г Гї Г¬Г ГІГ°ГЁГ¶Г :');
     For I := 0 To High(Matrix) Do
     Begin
         For J := 0 To High(Matrix[0]) Do
@@ -251,12 +251,12 @@ Var
 Begin
     Repeat
         IsCorrect := True;
-        Writeln('Введите путь к файлу, в который нужно записать результат.');
+        Writeln('Г‚ГўГҐГ¤ГЁГІГҐ ГЇГіГІГј ГЄ ГґГ Г©Г«Гі, Гў ГЄГ®ГІГ®Г°Г»Г© Г­ГіГ¦Г­Г® Г§Г ГЇГЁГ±Г ГІГј Г°ГҐГ§ГіГ«ГјГІГ ГІ.');
         Readln(Path);
         IsCorrect := CheckFilePath(Path);
         If IsCorrect And FileIsReadOnly(Path) Then
         Begin
-            Writeln('Введенный Вами файл доступен только для чтения. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»Г© Г‚Г Г¬ГЁ ГґГ Г©Г« Г¤Г®Г±ГІГіГЇГҐГ­ ГІГ®Г«ГјГЄГ® Г¤Г«Гї Г·ГІГҐГ­ГЁГї. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
         End;
     Until IsCorrect;
@@ -277,21 +277,21 @@ Begin
             Try
                 Rewrite(FOut);
                 If MaxZeroAmount = 0 Then
-                    Writeln(FOut, 'В матрице нет строк с нулевыми элементами.')
+                    Writeln(FOut, 'Г‚ Г¬Г ГІГ°ГЁГ¶ГҐ Г­ГҐГІ Г±ГІГ°Г®ГЄ Г± Г­ГіГ«ГҐГўГ»Г¬ГЁ ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ГЁ.')
                 Else If MaxZeroRows = 1 Then
                 Begin
                     Write(FOut,
-                      'Строка с максимальным количеством нулевых элементов: ');
+                      'Г‘ГІГ°Г®ГЄГ  Г± Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г»Г¬ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ®Г¬ Г­ГіГ«ГҐГўГ»Гµ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў: ');
                     For J := 0 To High(Matrix[0]) Do
                         Write(FOut, Matrix[Index][J], ' ');
                 End
                 Else If (MaxZeroRows = (High(Matrix) + 1)) And
                   (MaxZeroAmount = (High(Matrix[0]) + 1)) Then
-                    Writeln(FOut, 'Все элементы матрицы - нулевые элементы.')
+                    Writeln(FOut, 'Г‚Г±ГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ» Г¬Г ГІГ°ГЁГ¶Г» - Г­ГіГ«ГҐГўГ»ГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ».')
                 Else
                 Begin
                     Writeln(FOut,
-                      'Строки с максимальным количеством нулевых элементов: ');
+                      'Г‘ГІГ°Г®ГЄГЁ Г± Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г»Г¬ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ®Г¬ Г­ГіГ«ГҐГўГ»Гµ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў: ');
                     For I := 0 To High(IndexArray) Do
                     Begin
                         For J := 0 To High(Matrix[0]) Do
@@ -303,19 +303,19 @@ Begin
                 CloseFile(FOut);
             End;
         Except
-            Writeln('Произошла ошибка. Повторите попытку.');
+            Writeln('ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ . ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
             IsCorrect := False;
             Path := CheckFileOutputPath();
         End;
     Until IsCorrect;
-    Writeln('Результат записан.');
+    Writeln('ГђГҐГ§ГіГ«ГјГІГ ГІ Г§Г ГЇГЁГ±Г Г­.');
 End;
 
 Procedure OutputMaxZeroRow(Index: Integer; Matrix: TMatrix);
 Var
     J: Integer;
 Begin
-    Write('Строка с максимальным количеством нулевых элементов: ');
+    Write('Г‘ГІГ°Г®ГЄГ  Г± Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г»Г¬ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ®Г¬ Г­ГіГ«ГҐГўГ»Гµ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў: ');
     For J := 0 To High(Matrix[0]) Do
         Write(Matrix[Index][J], ' ');
 End;
@@ -324,7 +324,7 @@ Procedure OutputMaxZeroRows(IndexArray: TArrOI; Matrix: TMatrix);
 Var
     I, J: Integer;
 Begin
-    Writeln('Строки с максимальным количеством нулевых элементов: ');
+    Writeln('Г‘ГІГ°Г®ГЄГЁ Г± Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г»Г¬ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ®Г¬ Г­ГіГ«ГҐГўГ»Гµ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў: ');
     For I := 0 To High(IndexArray) Do
     Begin
         For J := 0 To High(Matrix[0]) Do
@@ -337,12 +337,12 @@ Procedure OutputResult(MaxZeroAmount, MaxZeroRows, Index: Integer;
   IndexArray: TArrOI; Matrix: TMatrix);
 Begin
     If MaxZeroAmount = 0 Then
-        Writeln('В матрице нет строк с нулевыми элементами.')
+        Writeln('Г‚ Г¬Г ГІГ°ГЁГ¶ГҐ Г­ГҐГІ Г±ГІГ°Г®ГЄ Г± Г­ГіГ«ГҐГўГ»Г¬ГЁ ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ГЁ.')
     Else If MaxZeroRows = 1 Then
         OutputMaxZeroRow(Index, Matrix)
     Else If (MaxZeroRows = (High(Matrix) + 1)) And
       (MaxZeroAmount = (High(Matrix[0]) + 1)) Then
-        Writeln('Все элементы матрицы - нулевые элементы.')
+        Writeln('Г‚Г±ГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ» Г¬Г ГІГ°ГЁГ¶Г» - Г­ГіГ«ГҐГўГ»ГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ».')
     Else
         OutputMaxZeroRows(IndexArray, Matrix);
 End;
@@ -359,12 +359,12 @@ Begin
             Readln(Num);
         Except
             IsCorrect := False;
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         End;
         If IsCorrect And ((Num <> 0) And (Num <> 1)) Then
         Begin
             IsCorrect := False;
-            Writeln('Введенные данные не соответствуют условию. Повторите попытку.');
+            Writeln('Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГІ ГіГ±Г«Г®ГўГЁГѕ. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГЇГ®ГЇГ»ГІГЄГі.');
         End;
     Until (IsCorrect);
     Writeln;
@@ -373,8 +373,8 @@ End;
 
 Procedure WriteCondition();
 Begin
-    Writeln('Данная программа находит строку матрицы, в которой больше всего нулевых элементов.');
-    Writeln('Элементы матрицы - целые числа от -1000 до 1000.');
+    Writeln('Г„Г Г­Г­Г Гї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г  Г­Г ГµГ®Г¤ГЁГІ Г±ГІГ°Г®ГЄГі Г¬Г ГІГ°ГЁГ¶Г», Гў ГЄГ®ГІГ®Г°Г®Г© ГЎГ®Г«ГјГёГҐ ГўГ±ГҐГЈГ® Г­ГіГ«ГҐГўГ»Гµ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў.');
+    Writeln('ГќГ«ГҐГ¬ГҐГ­ГІГ» Г¬Г ГІГ°ГЁГ¶Г» - Г¶ГҐГ«Г»ГҐ Г·ГЁГ±Г«Г  Г®ГІ -1000 Г¤Г® 1000.');
 End;
 
 Var
@@ -386,7 +386,7 @@ Var
 Begin
     WriteCondition();
     Choice := CheckChoiceInput
-      ('Если Вы хотите вводить данные в консоль, введите 0. Если использовать файл, введите 1.');
+      ('Г…Г±Г«ГЁ Г‚Г» ГµГ®ГІГЁГІГҐ ГўГўГ®Г¤ГЁГІГј Г¤Г Г­Г­Г»ГҐ Гў ГЄГ®Г­Г±Г®Г«Гј, ГўГўГҐГ¤ГЁГІГҐ 0. Г…Г±Г«ГЁ ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ ГІГј ГґГ Г©Г«, ГўГўГҐГ¤ГЁГІГҐ 1.');
     If Choice = 0 Then
         Matrix := FillMatrixFromConsole()
     Else
@@ -404,7 +404,7 @@ Begin
         IndexArray := FindMaxZeroRowIndexArray(MaxZeroRows, MaxZeroAmount,
           ZeroAmount);
     Choice := CheckChoiceInput
-      ('Если Вы хотите вывести результат в консоль, введите 0. Если в файл, введите 1.');
+      ('Г…Г±Г«ГЁ Г‚Г» ГµГ®ГІГЁГІГҐ ГўГ»ГўГҐГ±ГІГЁ Г°ГҐГ§ГіГ«ГјГІГ ГІ Гў ГЄГ®Г­Г±Г®Г«Гј, ГўГўГҐГ¤ГЁГІГҐ 0. Г…Г±Г«ГЁ Гў ГґГ Г©Г«, ГўГўГҐГ¤ГЁГІГҐ 1.');
     If Choice = 0 Then
         OutputResult(MaxZeroAmount, MaxZeroRows, Index, IndexArray, Matrix)
     Else
